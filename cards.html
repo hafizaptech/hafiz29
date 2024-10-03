@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #5e2222;
+          }
+          
+          .card-container {
+            display: flex;
+            gap: 250px;
+          }
+          
+          .card {
+            width: 200px;
+            height: 300px;
+            perspective: 1000px;
+            position: relative;
+          }
+          
+          .card-front,
+          .card-back {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            color: white;
+            position: absolute;
+            backface-visibility: hidden;
+            transition: transform 0.6s ease;
+          }
+          
+          .card-front {
+            background-color: #0300bd;
+          }
+          
+          .card-back {
+            background-color: #91108a;
+            transform: rotateY(180deg);
+          }
+          
+          .card-image {
+            width: 100%;
+            height: 60%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            object-fit: cover;
+          }
+          
+          .card:hover .card-front {
+            transform: rotateY(180deg);
+          }
+          
+          .card:hover .card-back {
+            transform: rotateY(0deg);
+          }
+          
+          
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="card">
+          <div class="card-front">
+            <img src="i.webp" alt="Service 1" class="card-image">
+            <h3>Service 1</h3>
+          </div>
+          <div class="card-back">
+            <p>Information about Service 1</p>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-front">
+            <img src="i (9).webp" alt="Service 2" class="card-image">
+            <h3>Service 2</h3>
+          </div>
+          <div class="card-back">
+            <p>Information about Service 2</p>
+          </div>
+        </div>
+      
+        <div class="card">
+          <div class="card-front">
+            <img src="277aa565178347.Y3JvcCw5NjEsNzUyLDEyMSww.jpg" alt="Service 3" class="card-image">
+            <h3>Service 3</h3>
+          </div>
+          <div class="card-back">
+            <p>Information about Service 3</p>
+          </div>
+        </div>
+      </div>
+      
+</body>
+</html>
